@@ -5,13 +5,14 @@ import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
-import  static cloud.autotests.helpers.Autorisation.auth;
 
 @Tag("simple")
 public class DoramaLiveTests extends TestBase {
@@ -20,10 +21,19 @@ public class DoramaLiveTests extends TestBase {
     @Description("Soon to be implemented by you (or QA.GURU engineers)")
     @DisplayName("личный кабинет")
     void registrationTest() {
-      auth(login,password);
-        step("проверяем что появилось имя личного кабинета", () -> {
-            $(".dropdown-toggle").shouldBe(visible);
-        });
+        String login = "marymary";
+        String password ="marymary.kor@mail.ru";
+
+            step("", () -> open("https://lord-s047.lordfilm0.org/"));
+            step("войти в личный кабинет", () -> {
+                $(".btn-login.btn.js-login.to-mob").click();
+                $("#login_name").setValue(login);
+                $("#login_password").setValue(password);
+                $(".login-btn").click();
+
+            });
+
+
     }
 
 
@@ -32,16 +42,15 @@ public class DoramaLiveTests extends TestBase {
     @DisplayName("меню сайта")
     void menuTest() {
         step("// меню сайта", () -> {
-            open("https://doramalive.ru/");
-            $(".dropdown-toggle").click();
-            $$(".root-item").findBy(text("форум")).click();
-            $$(".root-item").findBy(text("справка")).click();
-            $$(".root-item").findBy(text("помочь сайту")).click();
-            $(".fa.fa-child").click();
+            open("https://lord-s047.lordfilm0.org/");
+            $(By.xpath("//*[@id=\"header\"]/div/ul/li[1]/a")).click();
+            $(By.xpath("//*[@id=\"header\"]/div/ul/li[2]/a")).click();
+            $$(".hmenu.fx-row.to-mob").findBy(text("мультфильмы")).click();
+            $(By.xpath("//*[@id=\"header\"]/div/ul/li[4]/a")).click();
+
+
         });
-        step("проверяем что в меню есть названия клавиш", () -> {
-            $(".navbar-collapse.collapse").shouldHave(text("форум"), text("справка"), text("помочь сайту"));
-        });
+
     }
 
 
@@ -49,17 +58,17 @@ public class DoramaLiveTests extends TestBase {
     @Description("Soon to be implemented by you (or QA.GURU engineers)")
     @DisplayName("поиск фильма")
     void generatedTest() {
-        auth(login,password);
+
 
         step("поиск и добавления фильма в отложеные", () -> {
-            $("#title-search").click();
-            $("#searchLive").setValue("мы все мертвы").pressEnter();
-            $("#bookmark-533616").click();
-            $$("#modal-bmark").findBy(text("отложено")).click();
+            open("https://lord-s047.lordfilm0.org/");
+            $("#story").setValue("мы все мертвы").pressEnter();
+            $(By.xpath("//*[@id=\"dle-content\"]/div[2]")).click();
+            
+
+
         });
-        step("проверяем что название фильма совпадает с поиском", () -> {
-            $(".media-body").shouldHave(text("мы все мертвы"));
-        });
+
     }
 
 
