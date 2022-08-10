@@ -30,8 +30,8 @@ public class TestBase {
 
     @BeforeEach
     void openLabirint() {
-        step("open labirint", () -> {
-            open("https://www.labirint.ru/");
+        step("open lordfilm", () -> {
+            open("https://lord-s047.lordfilm0.org/");
         });
     }
 
