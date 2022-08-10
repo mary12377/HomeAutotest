@@ -1,37 +1,40 @@
 package cloud.autotests.tests;
 
-import cloud.autotests.config.Project;
-import cloud.autotests.config.ProjectConfig;
 import cloud.autotests.helpers.Attach;
 import cloud.autotests.helpers.DriverSettings;
-import com.codeborne.selenide.Configuration;
+import cloud.autotests.pages.Autorisation;
+import cloud.autotests.pages.MainMenu;
+import cloud.autotests.pages.MainSerial;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.junit5.AllureJunit5;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.extension.ExtendWith;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
+import static com.codeborne.selenide.Selenide.open;
+import static io.qameta.allure.Allure.step;
 
 
-@ExtendWith({AllureJunit5.class})
 public class TestBase {
-
+    Autorisation cabinetPage = new Autorisation();
+    MainSerial searchPage = new MainSerial();
+    MainMenu mainPage = new MainMenu();
+    MovieTests helpPage = new MovieTests();
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.browserSize = "1920x1080";
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DriverSettings.configure();
-
     }
 
     @BeforeEach
-    public void beforeEach() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+    void openLabirint() {
+        step("open labirint", () -> {
+            open("https://www.labirint.ru/");
+        });
     }
+
 
     @AfterEach
     public void afterEach() {
