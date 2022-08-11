@@ -1,22 +1,24 @@
 package cloud.autotests.pages;
 
+import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
-import static io.qameta.allure.Allure.step;
 
 public class MovieSearch {
-    public static void movie() {
+    private final SelenideElement
+            textMovie = $("#story"),
 
-        step("найти фильм в поисковой строке", () -> {
-            open("https://lord-s047.lordfilm0.org/");
-            $("#story").setValue("мы все мертвы").pressEnter();
-            $(By.xpath("//*[@id=\"dle-content\"]/div[2]")).click();
-        });
-        step("проверяем что название фильма совпадает с поиском", () -> {
-            $(".fleft-desc.fx-1").shouldHave(text("Мы все мертвы "));
-        });
+    autTextPage = $(By.xpath("//*[@id=\"dle-content\"]/div[2]")),
+            nameTextPage = $(".fleft-desc.fx-1");
+
+    public void clickTextMovie() {
+        textMovie.setValue("мы все мертвы").pressEnter();
+        autTextPage.click();
+    }
+
+    public void chekTextMovie() {
+        nameTextPage.shouldHave(text("Мы все мертвы "));
     }
 }

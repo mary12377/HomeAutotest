@@ -1,27 +1,28 @@
 package cloud.autotests.pages;
 
+import cloud.autotests.config.Project;
+import com.codeborne.selenide.SelenideElement;
+
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
-import static io.qameta.allure.Allure.step;
 
 public class Autorisation {
+    private final SelenideElement mainPageSearchField = $(".btn-login.btn.js-login.to-mob"),
+                                  passwordPage = $("#login_password"),
+                                  loginPage = $("#login_name"),
+                                  autPage = $(".login-btn"),
+                                  namePage=$(".btn-login.btn.js-login.to-mob");
 
-    public static void auth(String login,String password) {
-        step("", () -> {
-            open("https://lord-s047.lordfilm0.org/");
-        });
-        step("войти в личный кабинет", () -> {
-            $(".btn-login.btn.js-login.to-mob").click();
-            $("#login_name").setValue(login);
-            $("#login_password").setValue(password);
-            $(".login-btn").click();
-
-        });
-        step("проверяем что появилось имя личного кабинета", () -> {
-            $(".btn-login.btn.js-login.to-mob").shouldBe(visible);
-        });
+    public void clickSearch() {
+        mainPageSearchField.click();
+        loginPage.setValue(Project.config.login());
+        passwordPage.setValue(Project.config.password());
+        autPage.click();
     }
+    public void clickName() {
+        namePage.shouldBe(visible);
+    }
+
 }
 
 

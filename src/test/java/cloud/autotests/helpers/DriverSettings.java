@@ -8,20 +8,18 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class DriverSettings {
 
     public static void configure() {
-        Configuration.baseUrl = "https://lord-s047.lordfilm0.org/";
-        Configuration.browserSize = System.getProperty("size", "1920x1080");
-        Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.pageLoadTimeout = 80000;
+        Configuration.browser = Project.config.browser();
+        Configuration.browserVersion = Project.config.browserVersion();
+        Configuration.browserSize = Project.config.browserSize();
+        Configuration.baseUrl = Project.config.webUrl();
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        Configuration.browserCapabilities = capabilities;
 
         if (Project.isRemoteWebDriver()) {
-            String login = Project.config.login();
-            String password = Project.config.password();
-            String remote = Project.config.remote();
-            DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
-            Configuration.browserCapabilities = capabilities;
-            Configuration.remote = "https://" + login + ":" + password + "@" + remote;
+            Configuration.remote = Project.config.remoteDriverUrl();
         }
     }
 
