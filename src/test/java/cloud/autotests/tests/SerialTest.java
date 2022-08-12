@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-public class SerialTest {
+public class SerialTest extends TestBase {
     MainSerial mainSerial = new MainSerial();
 
     @Test

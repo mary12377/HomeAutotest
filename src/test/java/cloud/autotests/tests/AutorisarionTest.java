@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-public class AutorisarionTest  {
+public class AutorisarionTest extends TestBase {
 
     @Test
     @Description("Soon to be implemented by you (or QA.GURU engineers)")

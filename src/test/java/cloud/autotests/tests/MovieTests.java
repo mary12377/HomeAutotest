@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 
-public class MovieTests {
+public class MovieTests extends TestBase {
 
 
     MovieSearch movieSearch = new MovieSearch();

@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-public class MenuTest {
+public class MenuTest extends TestBase{
     MainMenu mainMenu = new MainMenu();
 
     @Test

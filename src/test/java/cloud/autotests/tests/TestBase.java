@@ -20,6 +20,7 @@ public class TestBase {
         Configuration.browserSize = "1920x1080";
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DriverSettings.configure();
+
     }
 
 
