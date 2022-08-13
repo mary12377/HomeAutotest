@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # :four_leaf_clover:Проект по автоматизации тестирования сайта с фильмами:four_leaf_clover:
 <a id="anchor"></a>
 ## <a target="_blank" href="https://lord-s047.lordfilm0.org/">Сайт lord</a>
@@ -87,3 +88,6 @@ simple
 
 :heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
 :blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
+=======
+# HomeAutotest
+>>>>>>> origin/main
