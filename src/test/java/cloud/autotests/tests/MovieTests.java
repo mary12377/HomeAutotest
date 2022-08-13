@@ -20,8 +20,9 @@ public class MovieTests extends TestBase {
     @Description("Soon to be implemented by you (or QA.GURU engineers)")
     @DisplayName("найти фильм в поисковой строке")
     void movieTest() {
-        step("", () ->
-                open(Project.config.BASE_URL()));
+        step("", () -> {
+            open(Project.config.BASE_URL());
+        });
         step("найти фильм в поисковой строке", () -> {
             movieSearch.clickTextMovie();
 
@@ -30,7 +31,7 @@ public class MovieTests extends TestBase {
         step("проверяем что название фильма совпадает с поиском", () ->
 
         {
-            movieSearch.cheсkTextMovie();
+            movieSearch.textMovie();
         });
 
     }

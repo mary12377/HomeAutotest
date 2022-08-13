@@ -18,7 +18,7 @@ public class MovieSearch {
         autTextPage.click();
     }
 
-    public void cheсkTextMovie() {
+    public void textMovie() {
         nameTextPage.shouldHave(text("Мы все мертвы "));
     }
 }
