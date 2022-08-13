@@ -1,16 +1,15 @@
 package cloud.autotests.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 public class MovieSearch {
     private final SelenideElement
-            textMovie = $("#story"),
+            textMovie = $("#ajax_search"),
 
-    autTextPage = $(By.xpath("//*[@id=\"dle-content\"]/div[2]")),
+    autTextPage = $(".th-mask.fx-col.fx-center.fx-middle.anim"),
             nameTextPage = $(".fleft-desc.fx-1");
 
     public void clickTextMovie() {
