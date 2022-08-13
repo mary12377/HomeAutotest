@@ -48,13 +48,13 @@
 ## :four_leaf_clover: Запуск из терминала
 Локальный запуск:
 ```
-gradle clean simple
+gradle clean test
 ```
 
 Удаленный запуск:
 ```
 clean
-simple
+test
 -Dbrowser=${BROWSER}
 -DbrowserSize=${BROWSER_SIZE} 
 -DbrowserVersion=${BROWSER_VERSION}
