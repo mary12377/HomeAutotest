@@ -30,7 +30,7 @@ public class MovieTests extends TestBase {
         step("проверяем что название фильма совпадает с поиском", () ->
 
         {
-            movieSearch.chekTextMovie();
+            movieSearch.cheсkTextMovie();
         });
 
     }
