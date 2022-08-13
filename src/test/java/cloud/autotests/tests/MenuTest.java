@@ -19,7 +19,7 @@ public class MenuTest extends TestBase {
     @DisplayName("меню сайта")
     void menuTest() {
 
-        step("", () -> open(Project.config.BASE_URL()));
+        step("", () -> open(Project.config.baseUrl()));
         step("// меню сайта", () -> mainMenu.clickmenu());
         step("проверяем что в меню есть названия клавиш", () -> mainMenu.clickChekmenu());
     }

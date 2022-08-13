@@ -19,7 +19,7 @@ public class SerialTest extends TestBase {
     @DisplayName("выбор сериала по категориям")
     void serialTest() {
 
-        step("", () -> open(Project.config.BASE_URL()));
+        step("", () -> open(Project.config.baseUrl()));
         step("выбор сериала по категориям", () -> mainSerial.clickParameter());
         step("проверяем что есть кнопка стекстом фильм", () -> mainSerial.checkParameter());
     }

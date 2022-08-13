@@ -15,7 +15,7 @@ public interface ProjectConfig extends Config {
     String browserSize();
     String remoteDriverUrl();
     String videoStorage();
-    String BASE_URL();
+    String baseUrl();
     String login ();
     String password();
     String selenideLogin();

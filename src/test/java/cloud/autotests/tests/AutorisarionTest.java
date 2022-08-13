@@ -19,7 +19,7 @@ public class AutorisarionTest extends TestBase {
     @DisplayName("личный кабинет")
     void registrationTest() {
 
-        step("", () -> open(Project.config.BASE_URL()));
+        step("", () -> open(Project.config.baseUrl()));
         step("войти в личный кабинет", auth::clickSearch);
         step("проверяем что появилось имя личного кабинета", auth::clickName);
     }
