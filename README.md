@@ -65,17 +65,17 @@ simple
 ## :four_leaf_clover: Allure отчет
 - ### Главный экран отчета
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/ALLUREREPORT.png">
+<img title="Allure Overview Dashboard" src="images/A1.png">
 </p>
 
 - ### Страница с проведенными тестами
 <p align="center">
-<img title="Allure Test Page" src="images/ALLURREPOR.png">
+<img title="Allure Test Page" src="images/A2.png">
 </p>
 
 ## :four_leaf_clover: Отчет в Telegram
 <p align="center">
-<img title="TELEGRAMBOT" src="images/TELEGRAMBOT.png">
+<img title="TELEGRAMBOT" src="images/T1.png">
 </p>
 
 
@@ -83,12 +83,10 @@ simple
 ## :four_leaf_clover: Видео примеры прохождения тестов
 > К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
 <p align="center">
-  <img title="Selenoid Video" src="images/TESTS.gif">
+  <img title="Selenoid Video" src="images/movie.gif">
 
 :arrow_up: [Вверх страницы](#anchor)
 
 :heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
 :blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
 =======
-# HomeAutotest
->>>>>>> origin/main
