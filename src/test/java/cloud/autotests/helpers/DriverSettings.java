@@ -28,7 +28,7 @@ public class DriverSettings {
         if (Project.isRemoteWebDriver()) {
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
-            Configuration.remote = ("https://"+ Project.config.selenideLogin() + ":" + Project.config.selenidePassword() + "@" + System.getProperty("urlSelenoid"));
+            Configuration.remote = Project.config.remoteDriverUrl();
         }
 
         capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
