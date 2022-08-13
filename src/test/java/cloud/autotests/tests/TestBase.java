@@ -24,19 +24,17 @@ public class TestBase {
     }
 
 
-
     @AfterEach
     public void afterEach() {
-            String sessionId = DriverUtils.getSessionId();
+        String sessionId = DriverUtils.getSessionId();
 
-            Attach.takeScreenshot("Last screenshot");
-            Attach.pageSource();
-            Attach.browserConsoleLogs();
+        Attach.takeScreenshot("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Selenide.closeWebDriver();
 
-            Selenide.closeWebDriver();
-
-            if (Project.isVideoOn()) {
-                Attach.addVideo(sessionId);
-            }
+        if (Project.isVideoOn()) {
+            Attach.addVideo(sessionId);
         }
     }
+}

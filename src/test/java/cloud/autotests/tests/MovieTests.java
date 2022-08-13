@@ -21,7 +21,7 @@ public class MovieTests extends TestBase {
     @DisplayName("найти фильм в поисковой строке")
     void movieTest() {
         step("", () ->
-                open(Project.config.webUrl()));
+                open(Project.config.BASE_URL()));
         step("найти фильм в поисковой строке", () -> {
             movieSearch.clickTextMovie();
 

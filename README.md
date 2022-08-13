@@ -38,7 +38,7 @@
 
 
 ## :four_leaf_clover: Сборка в Jenkins
-### <a target="_blank" href="https://jenkins.autotests.cloud/job/qa.guru-hm13-Autotest/">Сборка в Jenkins</a>
+### <a target="_blank" href="https://jenkins.autotests.cloud/job/HomeAutotest/">Сборка в Jenkins</a>
 <p align="center">
 <img title="Jenkins Dashboard" src="images/">
 </p>  
