@@ -4,12 +4,14 @@ import cloud.autotests.config.Project;
 import cloud.autotests.pages.MainMenu;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-public class MenuTest extends TestBase{
+@Tag("simple")
+public class MenuTest extends TestBase {
     MainMenu mainMenu = new MainMenu();
 
     @Test
