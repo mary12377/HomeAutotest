@@ -19,8 +19,7 @@ public class AutorisarionTest extends TestBase {
     void registrationTest() {
         Autorisation auth = new Autorisation();
 
-        step("", () ->
-                open(Project.config.BASE_URL()));
+        step("", () -> open(Project.config.BASE_URL()));
         step("войти в личный кабинет", auth::clickSearch);
         step("проверяем что появилось имя личного кабинета", auth::clickName);
     }

@@ -14,7 +14,7 @@ public class MainMenu {
             mainSerial = $(By.xpath("//*[@id=\"header\"]/div/ul/li[2]/a")),
             mainMult = $(By.xpath("//*[@id=\"header\"]/div/ul/li[3]/a")),
             mainAnime = $(By.xpath("//*[@id=\"header\"]/div/ul/li[4]/a")),
-            resultPage = $(".hmenu.fx-row.to-mob");
+            resultPage = $(".header-in.wrap-center.fx-row.fx-middle");
 
     public void clickmenu() {
         mainMovie.click();

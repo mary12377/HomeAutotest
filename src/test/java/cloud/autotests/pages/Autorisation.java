@@ -3,7 +3,7 @@ package cloud.autotests.pages;
 import cloud.autotests.config.Project;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 public class Autorisation {
@@ -11,7 +11,7 @@ public class Autorisation {
                                   passwordPage = $("#login_password"),
                                   loginPage = $("#login_name"),
                                   autPage = $(".login-btn"),
-                                  namePage=$(".btn-login.btn.js-login.to-mob");
+                                  namePage=$(".login-title.nowrap");
 
     public void clickSearch() {
         mainPageSearchField.click();
@@ -20,7 +20,8 @@ public class Autorisation {
         autPage.click();
     }
     public void clickName() {
-        namePage.shouldBe(visible);
+        mainPageSearchField.click();
+        namePage.shouldHave(text("marymary"));
     }
 
 }
