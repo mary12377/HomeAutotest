@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # :four_leaf_clover:Проект по автоматизации тестирования сайта с фильмами:four_leaf_clover:
 <a id="anchor"></a>
 ## <a target="_blank" href="https://lord-s047.lordfilm0.org/">Сайт lord</a>
