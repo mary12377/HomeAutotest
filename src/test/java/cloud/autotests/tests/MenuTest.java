@@ -20,12 +20,8 @@ public class MenuTest extends TestBase {
     void menuTest() {
         step("", () ->
                 open(Project.config.BASE_URL()));
-        step("// меню сайта", () -> {
-            mainMenu.clickmenu();
-        });
-        step("проверяем что в меню есть названия клавиш", () -> {
-            mainMenu.clickChekmenu();
-        });
+        step("// меню сайта", () -> mainMenu.clickmenu());
+        step("проверяем что в меню есть названия клавиш", () -> mainMenu.clickChekmenu());
     }
 
 }

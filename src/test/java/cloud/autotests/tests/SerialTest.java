@@ -20,11 +20,7 @@ public class SerialTest extends TestBase {
     void serialTest() {
         step("Open main page", () ->
                 open(Project.config.BASE_URL()));
-        step("выбор сериала по категориям", () -> {
-            mainSerial.clickParameter();
-        });
-        step("проверяем что есть кнопка стекстом фильм", () -> {
-            mainSerial.checkParameter();
-        });
+        step("выбор сериала по категориям", () -> mainSerial.clickParameter());
+        step("проверяем что есть кнопка стекстом фильм", () -> mainSerial.checkParameter());
     }
 }
