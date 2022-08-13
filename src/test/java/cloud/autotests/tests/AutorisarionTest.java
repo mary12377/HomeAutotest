@@ -12,12 +12,12 @@ import static io.qameta.allure.Allure.step;
 
 @Tag("simple")
 public class AutorisarionTest extends TestBase {
+    Autorisation auth = new Autorisation();
 
     @Test
     @Description("Soon to be implemented by you (or QA.GURU engineers)")
     @DisplayName("личный кабинет")
     void registrationTest() {
-        Autorisation auth = new Autorisation();
 
         step("", () -> open(Project.config.BASE_URL()));
         step("войти в личный кабинет", auth::clickSearch);

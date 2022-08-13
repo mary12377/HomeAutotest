@@ -18,6 +18,7 @@ public class MenuTest extends TestBase {
     @Description("Soon to be implemented by you (or QA.GURU engineers)")
     @DisplayName("меню сайта")
     void menuTest() {
+
         step("", () -> open(Project.config.BASE_URL()));
         step("// меню сайта", () -> mainMenu.clickmenu());
         step("проверяем что в меню есть названия клавиш", () -> mainMenu.clickChekmenu());

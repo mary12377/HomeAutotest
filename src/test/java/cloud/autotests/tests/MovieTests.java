@@ -13,16 +13,15 @@ import static io.qameta.allure.Allure.step;
 @Tag("simple")
 public class MovieTests extends TestBase {
 
-
     MovieSearch movieSearch = new MovieSearch();
 
     @Test
     @Description("Soon to be implemented by you (or QA.GURU engineers)")
     @DisplayName("найти фильм в поисковой строке")
     void movieTest() {
+
         step("", () -> open(Project.config.BASE_URL()));
         step("найти фильм в поисковой строке", () -> movieSearch.clickTextMovie());
-
         step("проверяем что название фильма совпадает с поиском", () -> movieSearch.textMovie());
 
     }
