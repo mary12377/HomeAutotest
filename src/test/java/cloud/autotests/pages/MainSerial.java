@@ -3,7 +3,7 @@ package cloud.autotests.pages;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 public class MainSerial {
@@ -16,7 +16,7 @@ public class MainSerial {
             mainCountry = $(By.xpath("//*[@id=\"filter-wrap\"]/form/div[1]/div[2]/div/div/ul/li[2]")),
             mainSerialChoice = $(By.xpath("//*[@id=\"filter-wrap\"]/form/div[3]/div[1]/label[2]/span")),
             mainClear = $(By.xpath("//*[@id=\"filter-wrap\"]/form/div[4]/input[2]")),
-            resultText = $(".chosen-search-input.default");
+            resultText = $(".sect-title");
 
     public void clickParameter() {
 
@@ -31,7 +31,7 @@ public class MainSerial {
     }
 
     public void checkParameter() {
-        resultText.shouldBe(visible);
+        resultText.shouldHave(text("фильм"));
 
     }
 

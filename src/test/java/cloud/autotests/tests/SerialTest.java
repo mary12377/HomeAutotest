@@ -23,7 +23,7 @@ public class SerialTest extends TestBase {
         step("выбор сериала по категориям", () -> {
             mainSerial.clickParameter();
         });
-        step("проверяем что есть строка с текстом выберите жанр", () -> {
+        step("проверяем что есть кнопка стекстом фильм", () -> {
             mainSerial.checkParameter();
         });
     }
