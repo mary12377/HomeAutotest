@@ -18,8 +18,7 @@ public class SerialTest extends TestBase {
     @Description("Soon to be implemented by you (or QA.GURU engineers)")
     @DisplayName("выбор сериала по категориям")
     void serialTest() {
-        step("Open main page", () ->
-                open(Project.config.BASE_URL()));
+        step("", () -> open(Project.config.BASE_URL()));
         step("выбор сериала по категориям", () -> mainSerial.clickParameter());
         step("проверяем что есть кнопка стекстом фильм", () -> mainSerial.checkParameter());
     }
