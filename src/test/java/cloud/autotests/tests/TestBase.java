@@ -31,10 +31,11 @@ public class TestBase {
         Attach.takeScreenshot("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-        Selenide.closeWebDriver();
+
 
         if (Project.isVideoOn()) {
             Attach.addVideo(sessionId);
         }
+        Selenide.closeWebDriver();
     }
 }

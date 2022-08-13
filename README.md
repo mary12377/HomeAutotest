@@ -40,7 +40,9 @@
 ## :four_leaf_clover: Сборка в Jenkins
 ### <a target="_blank" href="https://jenkins.autotests.cloud/job/HomeAutotest/">Сборка в Jenkins</a>
 <p align="center">
-<img title="Jenkins Dashboard" src="images/">
+<img title="Jenkins Dashboard" src="images/J.png">
+</p>  <p align="center">
+<img title="Jenkins Dashboard" src="images/J1.png">
 </p>  
 
 ## :four_leaf_clover: Запуск из терминала
