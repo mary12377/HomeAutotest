@@ -35,16 +35,6 @@
 - [x] название фильма совпадает с поиском
 - [x] проверяем что есть строка с текстом выберите жанр
 
-
-
-## :four_leaf_clover: Сборка в Jenkins
-### <a target="_blank" href="https://jenkins.autotests.cloud/job/HomeAutotest/">Сборка в Jenkins</a>
-<p align="center">
-<img title="Jenkins Dashboard" src="images/J.png">
-</p>  <p align="center">
-<img title="Jenkins Dashboard" src="images/J1.png">
-</p>  
-
 ## :four_leaf_clover: Запуск из терминала
 Локальный запуск:
 ```
@@ -60,7 +50,30 @@ test
 -DbrowserVersion=${BROWSER_VERSION}
 -DbaseUrl=${BASE_URL}
 -DremoteDriverUrl=${REMOTE}
+
 ```
+## :four_leaf_clover: Property files
+```properties
+browserSize=1920x1080
+baseUrl=https://ta2.lordfilms.cfd/
+browser=chrome
+browserVersion=91.0
+remoteDriverUrl=
+videoStorage=
+login=marymary
+password=marymary.kor@mail.ru
+
+```
+
+## :four_leaf_clover: Сборка в Jenkins
+### <a target="_blank" href="https://jenkins.autotests.cloud/job/HomeAutotest/">Сборка в Jenkins</a>
+<p align="center">
+<img title="Jenkins Dashboard" src="images/J.png">
+</p>  <p align="center">
+<img title="Jenkins Dashboard" src="images/J1.png">
+</p>  
+
+
 
 ## :four_leaf_clover: Allure отчет
 - ### Главный экран отчета
