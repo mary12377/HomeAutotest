@@ -2,7 +2,6 @@ package cloud.autotests.tests;
 
 import cloud.autotests.config.Project;
 import cloud.autotests.pages.MainSerial;
-import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -15,8 +14,7 @@ public class SerialTest extends TestBase {
     MainSerial mainSerial = new MainSerial();
 
     @Test
-    @Description("Soon to be implemented by you (or QA.GURU engineers)")
-    @DisplayName("выбор сериала по категориям")
+    @DisplayName("Выбираем сериал по фильтру")
     void serialTest() {
 
         step("", () -> open(Project.config.baseUrl()));

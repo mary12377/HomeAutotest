@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 
-public class MainMenu {
+public class MenuSite {
 
     private final SelenideElement
             mainMovie = $(By.xpath("//*[@id=\"header\"]/div/ul/li[1]/a")),

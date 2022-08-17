@@ -54,6 +54,7 @@ test
 ```
 ## :four_leaf_clover: Property files
 ```properties
+src/test/resources/config/app.properties
 browserSize=1920x1080
 baseUrl=https://ta2.lordfilms.cfd/
 browser=chrome

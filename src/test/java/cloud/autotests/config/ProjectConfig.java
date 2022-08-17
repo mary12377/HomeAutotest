@@ -11,14 +11,23 @@ import org.aeonbits.owner.Config;
 public interface ProjectConfig extends Config {
 
     String browser();
+
     String browserVersion();
+
     String browserSize();
+
     String remoteDriverUrl();
+
     String videoStorage();
+
     String baseUrl();
-    String login ();
+
+    String login();
+
     String password();
+
     String selenideLogin();
+
     String selenidePassword();
 
 }
