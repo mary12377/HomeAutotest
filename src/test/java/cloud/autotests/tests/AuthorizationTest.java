@@ -16,14 +16,17 @@ public class AuthorizationTest extends TestBase {
     @Test
     @DisplayName("личный кабинет")
     void personalAccountTest() {
-        step("Oткрывам сайт LORDFILM", () -> {
+
+        step("Oткрываем сайт LORDFILM", () -> {
             open(Project.config.baseUrl());
-            step("Авторизуемся как пользователь", () -> {
-                auth.accountAuthorization();
-                step("Проверяем что появился пользователь", () -> {
-                    auth.userName("marymary");
-                });
-            });
         });
+        step("Авторизуемся как пользователь", () -> {
+            auth.accountAuthorization();
+        });
+        step("Проверяем что появился пользователь", () -> {
+            auth.userName("marymary");
+        });
+
+
     }
 }
