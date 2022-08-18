@@ -14,7 +14,7 @@ public class MenuSite {
 
             movieIkon = $(By.xpath("//*[@id=\"header\"]/div/ul/li[1]/a")),
             serialIkon = $(By.xpath("//*[@id=\"header\"]/div/ul/li[2]/a")),
-            multIkon = $(By.xpath("//*[@id=\"header\"]/div/ul/li[3]/a")),
+            multiIkon = $(By.xpath("//*[@id=\"header\"]/div/ul/li[3]/a")),
             animeIkon = $(By.xpath("//*[@id=\"header\"]/div/ul/li[4]/a")),
             resultIcon = $(".header-in.wrap-center.fx-row.fx-middle");
 
@@ -25,7 +25,7 @@ public class MenuSite {
         serialIkon.click();
     }
     public void setMultiIconClick() {
-        multIkon.click();
+        multiIkon.click();
     }
 
     public void setAnimeIconClick() {
