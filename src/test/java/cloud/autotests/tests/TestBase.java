@@ -4,6 +4,10 @@ import cloud.autotests.config.Project;
 import cloud.autotests.helpers.Attach;
 import cloud.autotests.helpers.DriverSettings;
 import cloud.autotests.helpers.DriverUtils;
+import cloud.autotests.pages.Authorization;
+import cloud.autotests.pages.MainSerial;
+import cloud.autotests.pages.MenuSite;
+import cloud.autotests.pages.MovieSearch;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -13,6 +17,11 @@ import org.junit.jupiter.api.BeforeAll;
 
 
 public class TestBase {
+
+    Authorization auth = new Authorization();
+    MainSerial mainSerial = new MainSerial();
+    MenuSite menuSite = new MenuSite();
+    MovieSearch movieSearch = new MovieSearch();
 
     @BeforeAll
     static void beforeAll() {

@@ -21,7 +21,7 @@ public class Authorization {
         authInput.click();
     }
 
-    public void authorizationTest(String name) {
+    public void userName(String name) {
         accountField.click();
         nameAccount.shouldHave(text(name));
     }
