@@ -32,8 +32,8 @@ public class MenuSite {
         animeIkon.click();
     }
 
-    public void checkingMenuIcons(String movie, String serial, String mult) {
-        resultIcon.shouldHave(text(movie), text(serial), text(mult));
+    public void checkingMenuIcons(String movie, String serial, String multi) {
+        resultIcon.shouldHave(text(movie), text(serial), text(multi));
 
     }
 }
