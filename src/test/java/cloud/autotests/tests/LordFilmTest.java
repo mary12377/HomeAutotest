@@ -26,7 +26,7 @@ public class LordFilmTest extends TestBase {
 
     @Test
     @DisplayName("Выбираем сериал по параметрам")
-    void searchByParameters() {
+    void movieSearchTestWithParameters() {
 
         step("Oткрываем сайт LORDFILM", () -> {
             open(Project.config.baseUrl());
@@ -75,7 +75,7 @@ public class LordFilmTest extends TestBase {
 
     @Test
     @DisplayName("Ищем фильм в поисковой строке")
-    void CheckingTheMovieNameTest() {
+    void сheckingTheMovieSearchTest() {
 
         step("Oткрываем сайт LORDFILM", () -> {
             open(Project.config.baseUrl());
