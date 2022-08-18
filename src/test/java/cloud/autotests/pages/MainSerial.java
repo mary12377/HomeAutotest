@@ -40,7 +40,7 @@ public class MainSerial {
     }
 
 
-    public void checkParameter(String movie) {
+    public void checkParameterName(String movie) {
         resultText.shouldHave(text(movie));
 
     }

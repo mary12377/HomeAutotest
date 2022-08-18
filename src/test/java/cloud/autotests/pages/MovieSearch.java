@@ -12,12 +12,13 @@ public class MovieSearch {
             authText = $(".th-img.img-resp-vert"),
             nameText = $(".fleft-desc.fx-1");
 
-    public void textMovie() {
+    public void searchMovieTitle() {
         textMovie.setValue("няньки").pressEnter();
         authText.click();
     }
 
-    public void nameMovie(String text) {
+    public void CheckingTheMovieName(String text) {
+
         nameText.shouldHave(text(text));
     }
 }

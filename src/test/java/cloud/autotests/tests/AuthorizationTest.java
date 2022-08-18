@@ -24,7 +24,7 @@ public class AuthorizationTest extends TestBase {
             auth.accountAuthorization();
         });
         step("Проверяем что появился пользователь", () -> {
-            auth.userName("marymary");
+            auth.authorizationTest("marymary");
         });
     }
 }

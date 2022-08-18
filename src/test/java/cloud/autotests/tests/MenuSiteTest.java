@@ -33,7 +33,7 @@ public class MenuSiteTest extends TestBase {
             });
 
             step("Проверяем что в меню есть названия иконок", () ->
-                    menuSite.checkingMenuIcons("фильмы", "сериалы", "мультфильмы"));
+                    menuSite.checkMenuItems("фильмы", "сериалы", "мультфильмы"));
         });
     }
 }

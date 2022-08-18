@@ -21,10 +21,10 @@ public class MovieSearchTests extends TestBase {
         step("Oткрываем сайт LORDFILM", () -> {
             open(Project.config.baseUrl());
             step("Вводим название фильма и нажимаем Enter", () -> {
-                movieSearch.textMovie();
+                movieSearch.searchMovieTitle();
             });
             step("Проверяем что название фильма соответствует поиску", () ->
-                    movieSearch.nameMovie("Няньки"));
+                    movieSearch.CheckingTheMovieName("Няньки"));
         });
     }
 }

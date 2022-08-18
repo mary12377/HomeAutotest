@@ -33,7 +33,7 @@ public class MainSerialTest extends TestBase {
             mainSerial.parameterClear();
         });
         step("Проверяем что есть кнопка с текстом фильм", () -> {
-            mainSerial.checkParameter("фильм");
+            mainSerial.checkParameterName("фильм");
         });
 
     }
