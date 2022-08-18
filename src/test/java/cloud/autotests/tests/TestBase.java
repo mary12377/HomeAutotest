@@ -30,7 +30,6 @@ public class TestBase {
         DriverSettings.configure();
     }
 
-
     @AfterEach
     public void afterEach() {
         String sessionId = DriverUtils.getSessionId();
@@ -38,7 +37,6 @@ public class TestBase {
         Attach.takeScreenshot("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-
 
         if (Project.isVideoOn()) {
             Attach.addVideo(sessionId);
