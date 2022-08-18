@@ -12,8 +12,8 @@ public class MovieSearch {
             authText = $(".th-img.img-resp-vert"),
             nameText = $(".fleft-desc.fx-1");
 
-    public void searchMovieTitle() {
-        textMovie.setValue("няньки").pressEnter();
+    public void searchMovieTitle(String movie) {
+        textMovie.setValue(movie).pressEnter();
         authText.click();
     }
 

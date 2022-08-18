@@ -80,7 +80,7 @@ public class LordFilmTest extends TestBase {
         step("Oткрываем сайт LORDFILM", () -> {
             open(Project.config.baseUrl());
             step("Вводим название фильма и нажимаем Enter", () -> {
-                movieSearch.searchMovieTitle();
+                movieSearch.searchMovieTitle("няньки");
             });
             step("Проверяем что название фильма соответствует поиску", () ->
                     movieSearch.CheckingTheMovieName("Няньки"));
