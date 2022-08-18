@@ -7,6 +7,8 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 public class MainSerial {
+
+    // CSS локатор не удалось подобрать
     private final SelenideElement
 
             mainSerialText = $(".sect-title"),

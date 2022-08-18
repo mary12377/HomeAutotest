@@ -9,6 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class MenuSite {
 
+    // CSS локатор не удалось подобрать
     private final SelenideElement
 
             movieIkon = $(By.xpath("//*[@id=\"header\"]/div/ul/li[1]/a")),
