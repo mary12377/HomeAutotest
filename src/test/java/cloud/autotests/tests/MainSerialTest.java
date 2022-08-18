@@ -14,25 +14,25 @@ public class MainSerialTest extends TestBase {
     MainSerial mainSerial = new MainSerial();
 
     @Test
-    @DisplayName("Выбираем сериал по фильтру")
+    @DisplayName("Выбираем сериал по параметрам")
     void choiceSerial() {
 
         step("Oткрываем сайт LORDFILM", () -> {
             open(Project.config.baseUrl());
         });
-        step("Выбираем фильтр жанр", () -> {
+        step("Выбираем параметр жанр", () -> {
             mainSerial.parameterGenre();
         });
-        step("Выбираем фильтр страна", () -> {
+        step("Выбираем параметр страна", () -> {
             mainSerial.parameterCountry();
         });
-        step("Выбираем фильтр сериал", () -> {
+        step("Выбираем параметр сериал", () -> {
             mainSerial.parameterSerial();
         });
-        step("Выбираем фильтр очистить", () -> {
+        step("Выбираем параметр очистить", () -> {
             mainSerial.parameterClear();
         });
-        step("Проверяем что есть кнопка с текстом фильм", () -> {
+        step("Проверяем что есть кнопка с параметром фильм", () -> {
             mainSerial.checkParameterName("фильм");
         });
 
