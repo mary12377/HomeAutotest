@@ -14,15 +14,26 @@ public class MenuSiteTest extends TestBase {
     MenuSite menuSite = new MenuSite();
 
     @Test
-    @DisplayName("меню сайта")
+    @DisplayName("Меню сайта")
     void menuTest() {
 
-        step("Oткрывам сайт LORDFILM", () -> {
-            open(Project.config.baseUrl());});
-        step("// меню сайта", () -> menuSite.clickmenu());
-        step("проверяем что в меню есть названия клавиш", () -> menuSite.clickChekmenu());
+        step("Oткрываeм сайт LORDFILM", () -> {
+            open(Project.config.baseUrl());
+            step("Нажимаем на иконку фильм", () -> {
+                menuSite.movieIconClick();
+            });
+            step("Нажимаем на иконку сериал", () -> {
+                menuSite.serialIconClick();
+            });
+            step("Нажимаем на иконку мультфильмы", () -> {
+                menuSite.setMultiIconClick();
+            });
+            step("Нажимаем на иконку аниме", () -> {
+                menuSite.setAnimeIconClick();
+            });
+
+            step("Проверяем что в меню есть названия иконок", () ->
+                    menuSite.checkingMenuIcons("фильмы", "сериалы", "мультфильмы"));
+        });
     }
-
 }
-
-

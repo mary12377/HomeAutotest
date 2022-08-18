@@ -9,15 +9,15 @@ public class MovieSearch {
     private final SelenideElement
             textMovie = $("#ajax_search"),
 
-            autTextPage = $(".th-mask.fx-col.fx-center.fx-middle.anim"),
-            nameTextPage = $(".fleft-desc.fx-1");
-
-    public void clickTextMovie() {
-        textMovie.setValue("мы все мертвы").pressEnter();
-        autTextPage.click();
-    }
+            authText = $(".th-img.img-resp-vert"),
+            nameText = $(".fleft-desc.fx-1");
 
     public void textMovie() {
-        nameTextPage.shouldHave(text("Мы все мертвы "));
+        textMovie.setValue("няньки").pressEnter();
+        authText.click();
+    }
+
+    public void nameMovie(String text) {
+        nameText.shouldHave(text(text));
     }
 }

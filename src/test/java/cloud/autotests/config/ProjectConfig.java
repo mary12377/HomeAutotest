@@ -6,7 +6,6 @@ import org.aeonbits.owner.Config;
 @Config.Sources({
         "system:properties",
         "classpath:config/app.properties"
-
 })
 public interface ProjectConfig extends Config {
 

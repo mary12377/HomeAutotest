@@ -15,12 +15,16 @@ public class MovieSearchTests extends TestBase {
     MovieSearch movieSearch = new MovieSearch();
 
     @Test
-    @DisplayName("найти фильм в поисковой строке")
+    @DisplayName("Ищем фильм в поисковой строке")
     void movieTest() {
 
-        step("", () -> open(Project.config.baseUrl()));
-        step("найти фильм в поисковой строке", () -> movieSearch.clickTextMovie());
-        step("проверяем что название фильма совпадает с поиском", () -> movieSearch.textMovie());
-
+        step("Oткрываем сайт LORDFILM", () -> {
+            open(Project.config.baseUrl());
+            step("Вводим название фильма и нажимаем Enter", () -> {
+                movieSearch.textMovie();
+            });
+            step("Проверяем что название фильма соответствует поиску", () ->
+                    movieSearch.nameMovie("Няньки"));
+        });
     }
 }

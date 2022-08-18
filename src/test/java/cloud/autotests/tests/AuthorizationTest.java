@@ -14,7 +14,7 @@ public class AuthorizationTest extends TestBase {
     Authorization auth = new Authorization();
 
     @Test
-    @DisplayName("личный кабинет")
+    @DisplayName("Личный кабинет")
     void personalAccountTest() {
 
         step("Oткрываем сайт LORDFILM", () -> {
@@ -26,7 +26,5 @@ public class AuthorizationTest extends TestBase {
         step("Проверяем что появился пользователь", () -> {
             auth.userName("marymary");
         });
-
-
     }
 }

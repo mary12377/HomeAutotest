@@ -8,30 +8,40 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class MainSerial {
     private final SelenideElement
+
             mainSerialText = $(".sect-title"),
             mainTextSerial = $(".chosen-choices"),
-
-            mainTextMovie = $(By.xpath("//*[@id=\"filter-wrap\"]/form/div[1]/div[1]/div/div/ul/li[3]")),
-            mainTextgenre = $(By.xpath("//*[@id=\"filter-wrap\"]/form/div[1]/div[2]/div/ul")),
-            mainCountry = $(By.xpath("//*[@id=\"filter-wrap\"]/form/div[1]/div[2]/div/div/ul/li[2]")),
-            mainSerialChoice = $(By.xpath("//*[@id=\"filter-wrap\"]/form/div[3]/div[1]/label[2]/span")),
-            mainClear = $(By.xpath("//*[@id=\"filter-wrap\"]/form/div[4]/input[2]")),
+            textMovie = $(By.xpath("//*[@id=\"filter-wrap\"]/form/div[1]/div[1]/div/div/ul/li[3]")),
+            textGenre = $(By.xpath("//*[@id=\"filter-wrap\"]/form/div[1]/div[2]/div/ul")),
+            textCountry = $(By.xpath("//*[@id=\"filter-wrap\"]/form/div[1]/div[2]/div/div/ul/li[2]")),
+            textSerialChoice = $(By.xpath("//*[@id=\"filter-wrap\"]/form/div[3]/div[1]/label[2]/span")),
+            parametersClear = $(By.xpath("//*[@id=\"filter-wrap\"]/form/div[4]/input[2]")),
             resultText = $(".sect-title");
 
-    public void clickParameter() {
+    public void parameterGenre() {
 
         mainSerialText.click();
         mainTextSerial.click();
-        mainTextMovie.click();
-        mainTextgenre.click();
-        mainCountry.click();
-        mainSerialChoice.click();
-        mainClear.click();
+        textMovie.click();
+        textGenre.click();
 
     }
 
-    public void checkParameter() {
-        resultText.shouldHave(text("фильм"));
+    public void parameterCountry() {
+        textCountry.click();
+    }
+
+    public void parameterSerial() {
+        textSerialChoice.click();
+    }
+
+    public void parameterClear() {
+        parametersClear.click();
+    }
+
+
+    public void checkParameter(String movie) {
+        resultText.shouldHave(text(movie));
 
     }
 
